@@ -1,3 +1,5 @@
+const prompts = require('prompts');
+
 const thisUrl = () => fetch("https://hn.algolia.com/api/v1/search")
     .then((response) => {
         response.json
@@ -8,4 +10,13 @@ function print(){
     return console.log(thisUrl)
 }
 
-console.log("yo");
+
+(async () => {
+  const response = await prompts({
+    type: 'number',
+    name: 'news',
+    message: 'How many news you'+'\''+'d like to see?'
+  });
+
+  //console.log(response.news);
+})();
