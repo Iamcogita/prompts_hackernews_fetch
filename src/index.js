@@ -1,9 +1,9 @@
 const prompts = require('prompts');
 const newsArticle = require('./model.js');
 
-const apiUrl = "https://hn.algolia.com/api/v1/search";
+const url1 = "https://hn.algolia.com/api/v1/search";
 
-function getAlgolia(url){
+function APIfetcher(url){
     return fetch(url)
         .then((response) => response.json())
         .then((json) => {
@@ -28,9 +28,7 @@ function getAlgolia(url){
     message: 'How many news you'+'\''+'d like to see?'
   });
   let newsList = [];
-  let algoliaPromise = getAlgolia(apiUrl).then( a => newsList.push(...a));
-
+  let algoliaPromise = APIfetcher(url1).then( a => newsList.push(...a));
   await algoliaPromise;
   console.log(newsList.slice(0, response.pageSize));
-
 })();
