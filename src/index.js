@@ -1,22 +1,8 @@
 const prompts = require('prompts');
-
-class newsArticle {
-    title;
-    src;
-    url;
-    author;
-    date;
-    constructor(title, src, url, author, date) {
-      this.title = title;
-      this.src = src;
-      this.url = url;
-      this.author = author;
-      this.date = date;
-    }
-};
-
+const newsArticle = require('./model.js');
 
 const apiUrl = "https://hn.algolia.com/api/v1/search";
+
 function getAlgolia(url){
     return fetch(url)
         .then((response) => response.json())

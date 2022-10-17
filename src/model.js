@@ -1,4 +1,4 @@
-export class newsArticle {
+class newsArticle {
     title;
     src;
     url;
@@ -12,3 +12,5 @@ export class newsArticle {
       this.date = date;
     }
 }
+
+module.exports = newsArticle;
