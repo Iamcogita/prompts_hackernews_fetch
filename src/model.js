@@ -1,6 +1,7 @@
 class newsArticle {
-    constructor(title, src, url, author, date) {
+    constructor(title, name, src, url, author, date) {
       this.title = title;
+      this.name = name;
       this.src = src;
       this.url = url;
       this.author = author;
