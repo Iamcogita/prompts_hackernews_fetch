@@ -2,8 +2,6 @@ const prompts = require('prompts');
 const newsArticle = require('./model.js');
 
 const url1 = "https://hn.algolia.com/api/v1/search";
-//const url2 = "https://hn.algolia.com/api/v1/search";
-
 
 function APIfetcher(url){
     return fetch(url)
@@ -13,8 +11,6 @@ function APIfetcher(url){
             json.hits.forEach(e => {
                 news.push(new newsArticle(
                     e.title,
-                    e.name, 
-                    e.src,
                     e.url, 
                     e.author, 
                     e.created_at
