@@ -1,5 +1,5 @@
 # prompts_hackernews_fetch
 
-type: "npm start" on terminal on project src directory to receive prompt!
+Type: "npm start" in terminal at the project's src directory to receive prompt!
 
-that's it!
+<h3>that's it!</h3>
